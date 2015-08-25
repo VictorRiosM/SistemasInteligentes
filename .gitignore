@@ -1,4 +1,5 @@
 client_secrets.json
+*oauth2.json
 videos.py
 *.py~
 *.py#
