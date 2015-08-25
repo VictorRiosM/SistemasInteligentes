@@ -39,6 +39,6 @@ python videos.py --q doriga >> $1
 
 sed -i 's/,/\n/g' $1
 
-bash getcomments.sh
+bash getcomments.sh $1
 
 

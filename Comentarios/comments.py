@@ -75,8 +75,9 @@ def get_comment_threads(youtube, video_id, dfile):
     videoId=video_id,
     textFormat="plainText"
   ).execute()
-
+  
   f = open(dfile, 'a')
+  f.write('\nVIDEOID:'+video_id+'\n')
 
   for item in results["items"]:
     comment = item["snippet"]["topLevelComment"]
@@ -204,6 +205,6 @@ if __name__ == "__main__":
     #delete_comment(youtube, video_comments[0])
   except HttpError, e:
     print "An HTTP error %d occurred:\n%s" % (e.resp.status, e.content)
-  #else:
-    #print "Inserted, listed, updated, moderated, marked and deleted comments."
+  else:
+    print "Done."
     
